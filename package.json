@@ -1,0 +1,19 @@
+{
+  "name": "npm-offline",
+  "version": "1.0.0",
+  "description": "Verdaccio offline npm cache adapted for prison offline use",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caspia/npm-offline.git"
+  },
+  "author": "R Kent James <kent@caspia.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caspia/npm-offline/issues"
+  },
+  "homepage": "https://github.com/caspia/npm-offline#readme"
+}
