@@ -1,0 +1,18 @@
+# This file is a template to create a .env file for running npm-offline. Copy
+# this file into a file called .env and modify for the desired options.
+# When npm-offline is run as part of beluga, then the parent .env file
+# defined in beluga is used. In that case, these parameters should be added to
+# that file rather than a .env file in this directory (npm-offline). A .env file
+# in this directory is only used when npm-offline is started standalone, that is
+# typically during testing.
+
+# NP_OFFLINE_VOLUME is used to set the location where the verdaccio cache is stored in the docker host
+# system. If NPM_OFFLINE_VOLUME is not defined, then a small test verdaccio cache is loaded that has just
+# a few modules loaded, typically those in npm-populate/moduleListTest.txt (typically bootstrap,
+# debug, espress, jquery, lodash, and dependencies).
+
+#NPM_OFFLINE_VOLUME='-v /opt/volumes/verdaccio:/verdaccio/storage'
+
+# OFFLINE is typically set in the beluga .env file for use of all apps, but if not running
+# under beluga, you may set it locally for nom-offline to test offline.
+#OFFLINE=1
