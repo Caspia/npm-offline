@@ -29,4 +29,9 @@ else
   CONFIGFILE=configOffline.yaml
 fi
 
-docker run -d --restart=always -p "4873:4873" --name npm-offline --network="beluga" -e "VIRTUAL_HOST=npm-offline.ed" -e "VIRTUAL_PORT=4873" -e "CONFIGFILE=$CONFIGFILE" $NPM_OFFLINE_VOLUME caspia/verdaccio:latest 
+docker run -d --restart=always -p "4873:4873" \
+  --name npm-offline --network="beluga" \
+  --network-alias="npm-offline.ed" --network-alias="npm.ed" \
+  -e "VIRTUAL_HOST=npm-offline.ed,npm.ed" -e "VIRTUAL_PORT=4873" \
+  -e "CONFIGFILE=$CONFIGFILE" $NPM_OFFLINE_VOLUME \
+  caspia/verdaccio:latest 
